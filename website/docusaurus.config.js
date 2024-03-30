@@ -57,6 +57,7 @@ module.exports = {
         //   to: 'examples',
         //   label: 'Examples',
         // },
+        /*
         {
           type: "doc",
           docId: "Examples",
@@ -73,7 +74,6 @@ module.exports = {
           position: "left",
           docId: "Gallery",
         },
-        /*
         {
           label: "Other Languages",
           type: "dropdown",
