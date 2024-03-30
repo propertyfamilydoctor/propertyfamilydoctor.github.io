@@ -46,6 +46,7 @@ module.exports = {
           position: "left",
           label: "Docs",
         },
+        /*
         { to: "blog", label: "Blog", position: "left" },
         {
           type: "doc",
@@ -53,6 +54,7 @@ module.exports = {
           position: "left",
           label: "FAQ",
         },
+        */
         // {
         //   to: 'examples',
         //   label: 'Examples',
