@@ -94,8 +94,6 @@ Another approach involves LLM-based function calls, where LLM decides if a speci
 The figure below shows six examples of applications built using AutoGen.
 ![Applications](images/app.png)
 
-Find a list of examples in this page: [Automated Agent Chat Examples](../Examples.md#automated-multi-agent-chat)
-
 ## For Further Reading
 
 _Interested in the research that leads to this package? Please check the following papers._
