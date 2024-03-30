@@ -73,6 +73,7 @@ module.exports = {
           position: "left",
           docId: "Gallery",
         },
+        /*
         {
           label: "Other Languages",
           type: "dropdown",
@@ -89,6 +90,7 @@ module.exports = {
           label: "GitHub",
           position: "right",
         }
+        */
       ],
     },
     footer: {
