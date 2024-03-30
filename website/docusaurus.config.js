@@ -178,6 +178,7 @@ module.exports = {
         // When applying `zh` in language, please install `nodejieba` in your project.
       },
     ],
+    /*
     customPostCssPlugin,
     [
       "@docusaurus/plugin-client-redirects",
@@ -213,6 +214,6 @@ module.exports = {
           }
         ],
       },
-    ]
+    ]*/
   ],
 };
