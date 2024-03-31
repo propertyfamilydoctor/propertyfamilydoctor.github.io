@@ -20,7 +20,7 @@ module.exports = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/ag.ico",
-  organizationName: "PropertyFamilyDoctr", // Usually your GitHub org/user name.
+  organizationName: "PropertyFamilyDoctor", // Usually your GitHub org/user name.
   projectName: "PropertyFamilyDoctor", // Usually your repo name.
   scripts: [
     {
@@ -127,6 +127,7 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} AutoGen Authors |  <a target="_blank" style="color:#10adff" href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy and Cookies</a>`,
     },
+    /*
     announcementBar: {
       id: 'whats_new',
       content:
@@ -135,6 +136,7 @@ module.exports = {
       textColor: '#091E42',
       isCloseable: true,
     },
+    */
   },
   presets: [
     [
