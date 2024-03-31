@@ -16,7 +16,7 @@ module.exports = {
   title: "Property Family Doctor",
   tagline: "Property Family Doctor Enabled Next-Gen Large Language Model Applications",
   url: "https://propertyfamilydoctor.github.io",
-  baseUrl: "/autogen/",
+  baseUrl: "/propertyfamilydoctor/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/ag.ico",
