@@ -24,7 +24,7 @@ module.exports = {
   projectName: "PropertyFamilyDoctor", // Usually your repo name.
   scripts: [
     {
-      src: '/autogen/js/custom.js',
+      src: '/propertyfamilydoctor/js/custom.js',
       async: true,
       defer: true,
     },
