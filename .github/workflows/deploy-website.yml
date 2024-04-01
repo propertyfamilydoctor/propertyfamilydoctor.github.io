@@ -4,13 +4,13 @@ on:
   pull_request:
     branches: [main]
     path:
-      - "autogen/*"
+      - "propertyfamilydoctor/*"
       - "website/*"
       - ".github/workflows/deploy-website.yml"
   push:
     branches: [main]
     path:
-      - "autogen/*"
+      - "propertyfamilydoctor/*"
       - "website/*"
       - ".github/workflows/deploy-website.yml"
   workflow_dispatch:
