@@ -13,18 +13,18 @@ customPostCssPlugin = () => {
 }
 
 module.exports = {
-  title: "Property Family Doctor",
-  tagline: "Property Family Doctor Enabled Next-Gen Large Language Model Applications",
-  url: "https://propertyfamilydoctor.github.io",
-  baseUrl: "/",
+  title: "AutoGen",
+  tagline: "Enable Next-Gen Large Language Model Applications",
+  url: "https://microsoft.github.io",
+  baseUrl: "/autogen/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/ag.ico",
-  organizationName: "PropertyFamilyDoctor", // Usually your GitHub org/user name.
-  projectName: "PropertyFamilyDoctor", // Usually your repo name.
+  organizationName: "Microsoft", // Usually your GitHub org/user name.
+  projectName: "AutoGen", // Usually your repo name.
   scripts: [
     {
-      src: '/propertyfamilydoctor/js/custom.js',
+      src: '/autogen/js/custom.js',
       async: true,
       defer: true,
     },
@@ -33,6 +33,11 @@ module.exports = {
     format: 'detect', // Support for MD files with .md extension
   },
   themeConfig: {
+    docs: {
+      sidebar: {
+        autoCollapseCategories: true,
+      },
+    },
     navbar: {
       title: "AutoGen",
       logo: {
@@ -41,58 +46,111 @@ module.exports = {
       },
       items: [
         {
-          type: "doc",
-          docId: "Getting-Started",
+          type: "dropdown",
           position: "left",
           label: "Docs",
+          items: [
+            {
+              type: "doc",
+              label: "Getting Started",
+              docId: "Getting-Started",
+            },
+            {
+              type: "doc",
+              label: "Installation",
+              docId: "installation/Installation",
+            },
+            {
+              type: "doc",
+              label: "Tutorial",
+              docId: "tutorial/introduction",
+            },
+            {
+              type: "doc",
+              label: "User Guide",
+              docId: "topics",
+            },
+            {
+              type: "doc",
+              docId: "reference/agentchat/conversable_agent",
+              label: "API Reference",
+            },
+            {
+              type: "doc",
+              docId: "FAQ",
+              label: "FAQs",
+            },
+            {
+              type: "doc",
+              docId: "ecosystem",
+              label: "Ecosystem",
+            },
+            {
+              type: "doc",
+              label: "Contributor Guide",
+              docId: "contributor-guide/contributing",
+            },
+            {
+              type: "doc",
+              label: "Research",
+              docId: "Research",
+            },
+          ],
         },
-        /*
-        { to: "blog", label: "Blog", position: "left" },
         {
-          type: "doc",
-          docId: "FAQ",
-          position: "left",
-          label: "FAQ",
-        },
-        */
-        // {
-        //   to: 'examples',
-        //   label: 'Examples',
-        // },
-        /*
-        {
-          type: "doc",
-          docId: "Examples",
+          type: "dropdown",
           position: "left",
           label: "Examples",
-        },
-        {
-          to: "docs/notebooks",
-          position: "left",
-          label: "Notebooks",
-        },
-        {
-          type: "doc",
-          position: "left",
-          docId: "Gallery",
+          items: [
+            {
+              type: "doc",
+              label: "Examples by Category",
+              docId: "Examples",
+            },
+            {
+              type: "doc",
+              label: "Examples by Notebook",
+              docId: "notebooks",
+            },
+            {
+              type: "doc",
+              label: "Application Gallery",
+              docId: "Gallery",
+            },
+          ],
         },
         {
           label: "Other Languages",
           type: "dropdown",
-          position: "right",
+          position: "left",
           items: [
             {
               label: "Dotnet",
               href: "https://microsoft.github.io/autogen-for-net/",
             }
           ],
+
+        },
+        {
+          to: "blog",
+          label: "Blog",
+          position: "left",
         },
         {
           href: "https://github.com/microsoft/autogen",
           label: "GitHub",
           position: "right",
-        }
-        */
+        },
+        {
+          href: "https://aka.ms/autogen-dc",
+          label: "Discord",
+          position: "right",
+        },
+        {
+          href: "https://twitter.com/pyautogen",
+          label: "Twitter",
+          position: "right",
+        },
       ],
     },
     footer: {
@@ -116,7 +174,8 @@ module.exports = {
             //     // },
             {
               label: "Discord",
-              href: "https://discord.gg/pAbnFJrkgZ",
+              href: "https://aka.ms/autogen-dc",
+
             },
             {
               label: "Twitter",
@@ -127,7 +186,6 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} AutoGen Authors |  <a target="_blank" style="color:#10adff" href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy and Cookies</a>`,
     },
-    /*
     announcementBar: {
       id: 'whats_new',
       content:
@@ -136,7 +194,10 @@ module.exports = {
       textColor: '#091E42',
       isCloseable: true,
     },
-    */
+    /* Clarity Config */
+    clarity: {
+      ID: "lnxpe6skj1", // The Tracking ID provided by Clarity
+    }
   },
   presets: [
     [
@@ -184,7 +245,6 @@ module.exports = {
         // When applying `zh` in language, please install `nodejieba` in your project.
       },
     ],
-    /*
     customPostCssPlugin,
     [
       "@docusaurus/plugin-client-redirects",
@@ -193,10 +253,6 @@ module.exports = {
           {
             to: "/docs/topics/llm_configuration",
             from: ["/docs/llm_endpoint_configuration/"],
-          },
-          {
-            to: "/docs/ecosystem/memgpt/",
-            from: ["/docs/Ecosystem"],
           },
           {
             to: "/docs/Getting-Started",
@@ -217,9 +273,22 @@ module.exports = {
           {
             to: "/docs/topics/non-openai-models/local-lm-studio",
             from: ["/docs/topics/non-openai-models/lm-studio"],
+          },
+          {
+            to: "/docs/notebooks/agentchat_nested_chats_chess",
+            from: ["/docs/notebooks/agentchat_chess"],
+          },
+          {
+            to: "/docs/contributor-guide/contributing",
+            from: ["/docs/Contribute"],
           }
         ],
       },
-    ]*/
+    ],
+    [
+      'docusaurus-plugin-clarity',
+      {
+      }
+    ],
   ],
 };
